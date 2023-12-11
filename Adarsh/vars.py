@@ -32,7 +32,7 @@ class Var(object):
     FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
     HAS_SSL=bool(getenv('HAS_SSL',False))
     if HAS_SSL:
-        URL = "https://{}/".format(FQDN)
+        URL = "http{}://{}{}/".format("s" if HAS_SSL else "", FQDN, "" if NO_PORT else ":" + str(PORT))
     else:
         URL = "http://{}/".format(FQDN)
     DATABASE_URL = str(getenv('DATABASE_URL'))
