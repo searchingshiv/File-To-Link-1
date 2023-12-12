@@ -34,7 +34,7 @@ class Var(object):
     if HAS_SSL:
         URL = "http{}://{}{}/".format("s" if HAS_SSL else "", FQDN, "" if NO_PORT else ":" + str(PORT))
     else:
-        URL = "http://{}/".format(FQDN)
+        URL = "http{}://{}{}/".format("s" if HAS_SSL else "", FQDN, "" if NO_PORT else ":" + str(PORT))
     DATABASE_URL = str(getenv('DATABASE_URL'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', None))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split())) 
