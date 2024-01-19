@@ -1,85 +1,234 @@
+<!-- this code is written by @biisal tg:biisal-files  -->
+<!-- stealing credit doesn't make you developer..so try to give full credit to the developer 😊 u will not loose anything for giving proper credit.  -->
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta property="og:image" content="https://graph.org/file/97d3feeed5376739da08a.jpg" itemprop="thumbnailUrl">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>%s</title>
-    <link rel="stylesheet" type='text/css' href="https://drive----google.com/uc?export=view&id=1pVLG4gZy7jdow3sO-wFS06aP_A9QX0O6">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Delius">
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.9/plyr.css" />
-    
-        									 
-<style>
-      marquee{
-      font-size: 30px;
-      font-weight: 800;
-      color: Black;
-      font-family: serif;
-      }
-    </style>
-    <style>
-      marquee{
-      font-size: 30px;
-      font-weight: 800;
-      color: Black;
-      font-family: serif;
-      }
-    </style>
+    <title>THE SILENT TEAM | {{file_name}}</title>
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="https://biisal.github.io/Resources/StreamCSS.css">
+    <link rel="stylesheet" href="https://biisal.github.io/Resources/playerCss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
+<!-- this code is written by @biisal tg:biisal-files  -->
+<!-- stealing credit doesn't make you developer..so try to give full credit to the developer 😊 u will not loose anything for giving proper credit.   -->
 
 <body>
-	
-    <header>
-        <marquee bgcolor="#808080"
-<div class="toogle"></div>
-        <div id="file-name">
-            %s
+    <nav>
+        <div class="nleft">
+            <a href="https://t.me/THE_SILENT_TEAMS">
+                <!-- if u are trying to change the header name please remove the title text from bottom line  -->
+                <h3 id="heading" style="z-index: 100;" class="magnet">THE SILENT TEAM</h3>
+            </a>
         </div>
-</marquee>
-    </header>
+        <div class="nryt">
+            <a class="home-btn magnet" href="#main" onclick="toggleWidthnav(this)">HOME</a>
 
-    <div class="container">
-        <tag src="%s" class="player"></tag>
-    </div>
+            <a href="#sec1" class="about-btn magnet" onclick="toggleWidthnav(this)">ABOUT</a>
+        </div>
+    </nav>
+    <center>
+        <div class="about-nav">
+            <a href="#sec1" class="wlcm magnet" onclick="toggleWidth(this)">WELCOME</a>
+            <a href="#sec2" class="abt-chnl magnet" onclick="toggleWidth(this)">CHANNELS</a>
+            <a href="#sec3" class="magnet bot-btn" onclick="toggleWidth(this) , bot_btn_clicked()">BOTS</a>
+            <a href="#sec4" class="magnet contact-btn" onclick="toggleWidth(this)">LET'S TALK</a>
+        </div>
+    </center>
+    <!-- this code is written by @biisal tg:biisal-files  -->
+    <!-- stealing credit doesn't make you developer..so try to give full credit to the developer 😊 u will not loose anything for giving proper credit.   -->
 
-    <footer>
-	    <center><h4>Video not playing ? possibly because your browser or the player doesn't support codec please download and watch :D <br> By : The Silent Teams</h4></center><p>
-	    <center><h2><a href="https://t.me/+9bpv69G2aPMyNjFl">
-  <img src="https://te.legra.ph/file/1952edc669d200839995d.jpg" alt="Silent Teams" width="150" height="75"></center>
-</a></center>
-	    	    
+    <div class="outer">
+        <div class="inner">
+            <div class="main" id="main">
+                <video id="player" class="player" src="{{file_url}}" type="video/mp4" playsinline controls
+                    width="100%"></video>
+                <div class="player"></div>
+                <div class="file-name">
+                    <h4>File name : </h4>
+                    <br>
+                    <p id="myDiv">{{file_name}}</p>
+                </div>
+                <div class="downloadBtn">
+                    <button class="magnet" onclick="vlc_player()"><img src="https://i.postimg.cc/15TQ4y7B/vlc.png"
+                            alt="">watch in VLC PLAYER</button>
+                    <button class="magnet" onclick="mx_player()"><img src="https://i.postimg.cc/sx4Msv4T/mx.png"
+                            alt="">watch in MX PLAYER</button>
+                    <button class="magnet" onclick="playit_player()"><img src="https://i.postimg.cc/RVGWYJFF/playit.png"
+                            alt="">watch in PLAYit
+                        PLAYER</button>
+                    <button class="magnet" onclick="km_player()"><img src="https://i.postimg.cc/wT9tFQ9Z/km.png"
+                            alt="">watch in KM PLAYER</button>
+                    <button class="magnet" onclick="s_player()"><img src="https://i.postimg.cc/XYJr6NGg/s.png"
+                            alt="">watch in S PLAYER</button>
+                    <button class="magnet" onclick="hd_player()"><img src="https://i.postimg.cc/rFT43LNh/hd.png"
+                            alt="">watch in HD
+                        PLAYER(4K)</button>
+                    <button class="magnet" onclick="bisalDownload()"><img style="height: 35px;"
+                            src="https://i.postimg.cc/Zncc9YLq/Pngtree-download-icon-3581467.png" alt="">download video
+                    </button>
+                </div>
+
+            </div>
+            <div class="abt">
+                <div class="about">
+                    <div class="about-dets">
+                        <div class="abt-sec" id="sec1" style="padding: 160px 30px;">
+                            <h1 style="text-align: center;">WELCOME TO OUR <Span>STREAMING</Span> PAGE</h1>
+                            <p style="text-align: center; line-height: 2;word-spacing: 2px;  letter-spacing: 0.8px;">
+                                We're
+                                thrilled to have <span>you</span> here.
+                                Get ready for an
+                                amazing <span>experience</span>
+                                filled with <span>entertainment</span>, <span>fun</span>, and <span>surprises</span>.
+                                Grab
+                                your snacks, sit back, and <span>enjoy</span> the show!
+                            </p>
+                        </div>
+                        <div class="abt-sec" id="sec2">
+                            <h1>OUR ALL <span>CHANNELS</span> LIST</h1>
+                            <div class="links chnl-link">
+                                <a class="magnet" href="https://t.me/THE_SILENT_TEAMS"><button>THE SILENT TEAM -
+                                        MAIN</button></a>
+                                <a class="magnet" href="https://t.me/+CZH0JaSwih44ZTM1"><button>SILENT TEAM | AUTO
+                                        GROUP</button></a>
+                                <a class="magnet" href="https://t.me/+ZSUTmOXuwqxlODk1"><button>SILENT TEAM | DISCUSSION
+                                        GROUP</button></a>
+                                <a class="magnet" href="https://t.me/TheSilentTeam"><button>THE SILENT TEAM -
+                                        BACKUP</button></a>
+                                <a class="magnet" href="https://t.me/Robo_5_0"><button>SILENT TEAM |
+                                        OWNER</button></a>
+                            </div>
+                        </div>
+                        <div class="abt-sec" id="sec3">
+                            <h1>OUR ALL <span>BOTS</span> LIST</h1>
+                            <div class="links bot-link">
+                                <a class="magnet" href="https://t.me/SilentHelper_bot"><button>Fɪʟᴇ Tᴏ LINK
+                                        Bᴏᴛ</button></a>
+                                <a class="magnet" href="https://t.me/silentautobot"><button>Aᴜᴛᴏ FILTER
+                                        Bᴏᴛ</button></a>
+                                <a class="magnet" href="https://t.me/DS_Auto_Bot"><button>Aᴜᴛᴏ FILTER Mᴀʀᴀᴛʜɪ
+                                        Bᴏᴛ</button></a>
+                                <a class="magnet" href="https://t.me/Man_With_SilentBot"><button>Pʀᴇᴍɪᴜᴍ Mᴇᴍʙᴇʀꜱʜɪᴘ Iɴǫᴜɪʀʏ
+                                        Bᴏᴛ</button></a>
+                                <a class="magnet" href="https://t.me/The_DS_Official_Bot"><button>Cᴏɴᴛᴀᴄᴛ Tᴏ Dᴇᴠᴇʟᴏᴘᴇʀ
+                                        Bᴏᴛ</button></a>
+                                <a class="magnet" href="https://t.me/Connect_With_Robot"><button>Cᴏɴᴛᴀᴄᴛ Tᴏ Oᴡɴᴇʀ
+                                        Bᴏᴛ</button></a>
+                            </div>
+                        </div>
+                        <div class="abt-sec" id="sec4">
+                            <!-- this code is written by @biisal tg:biisal-files  -->
+                            <!-- stealing credit doesn't make you developer..so try to give full credit to the developer 😊 u will not loose anything for giving proper credit.   -->
+
+                            <p style="text-align: center;">we can talk for your support and you can contact through
+                                telegram</p>
+                            <div class="links contact">
+                                <a href="https://t.me/+ZSUTmOXuwqxlODk1"><button>DISCUSSION | SILENT TEAM</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="mid">
+                <h1 class="mid-text">VISIT <a href="#sec3" onclick="bot_btn_clicked()"><span>OUR BOTS LIST</span></a>
+                    FOR
+                    MORE
+                    INFO</h1>
+            </div>
+
+            <div class="last-text">
+                <p style="font-weight: 500;">
+                    Welcome to our online streaming platform! Our website allows users to generate streamable links for
+                    various files using Telegram bots. Please note that we are not responsible for the content shared or
+                    streamed through our service. Users are encouraged to respect copyright laws and adhere to our
+                    community
+                    guidelines. Enjoy easy, hassle-free file streaming.
+                </p>
+            </div>
+            <center>
+
+                <div class="movie-cont">
+                    <a href="https://t.me/+CZH0JaSwih44ZTM1">
+                        <div class="movieSug">
+                            <div class="movieDets">
+
+                            </div>
+                            <div class="movieimg">
+                                <img src="">
+                            </div>
+                        </div>
+                    </a>
+                    <div class="low-width-movie-dets">
+                        <div class="movieStsBar">
+                            <div class="movieDets-mini">
+
+                            </div>
+                        </div>
+                    </div>
+                    <button class="magnet" href="https://t.me/TST_Recommends"><button>Get More Movies Suggestion</button>
+                </div>
+
+            </center>
+            <!-- this code is written by @biisal tg:biisal-files  -->
+            <!-- stealing credit doesn't make you developer..so try to give full credit to the developer 😊 u will not loose anything for giving proper credit.   -->
 
 
-    </footer>
-    <script src="https://cdn.plyr.io/3.6.9/plyr.js"></script>
-	<script>
-        const controls = [
-              'play-large',
-              'rewind',
-              'play', 
-              'fast-forward', 
-              'progress', 
-              'current-time',
-              'duration',
-              'mute',
-              'volume',
-              'captions',
-              'settings',
-              'pip',
-              'airplay',
-              'download',
-              'fullscreen'
-            ];
-        document.addEventListener('DOMContentLoaded', () => {
-            const player = Plyr.setup('.player', { controls });
-        });
-
-        const body = document.querySelector('body');
-        const footer = document.querySelector('footer');
-        const toogle = document.querySelector('.toogle');
-    </script>
+            <center>
+                <div class="copyright">
+                    <h5 class="text-center">Copyright © 2023 <a href="https://t.me/THE_SILENT_TEAMS"><span
+                                style="font-weight: 700;">THE SILENT TEAM</span></a>. All
+                        Rights Reserved.</h5>
+                    <div class="icons">
+                        <a href="https://t.me/THE_SILENT_TEAMS"><i class="fa-brands fa-github fa-lg"></i></a>
+                        <a href="https://t.me/THE_SILENT_TEAMS"><i class="fa-brands fa-telegram fa-lg"></i></a>
+                        <a href="https://www.instagram.com/the_silent_teams"><i
+                                class="fa-brands fa-square-instagram fa-lg"></i></a>
+                    </div>
+                    <h4 style="font-weight: 700;">This Page Is Made By <a
+                            href="https://t.me/THE_DS_OFFICIAL"><span>𝚂𝙰𝙽𝙲𝙷𝙸𝚃 ♛⛧</span></a></h4>
+                </div>
+            </center>
+        </footer>
 </body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const uncopyableElement = document.querySelector(".uncopyable");
+
+        uncopyableElement.addEventListener("selectstart", function (event) {
+            event.preventDefault();
+        });
+    });
+</script>
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+<script src="https://cdn.plyr.io/3.6.9/plyr.js"></script>
+<script src="https://biisal.github.io/Resources/StreamJs.js"></script>
+<script src="script.js"></script>
+
 </html>
+
+<!-- this code is written by @biisal tg:biisal-files  -->
+<!-- stealing credit doesn't make you developer..so try to give full credit to the developer 😊 u will not loose anything for giving proper credit.   -->
